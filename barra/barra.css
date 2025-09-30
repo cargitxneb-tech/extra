@@ -62,7 +62,7 @@ body {
 #menu2-container .logo {
     font-size: 36px;
     font-weight: 800;
-    color: #ccc;
+    color: #000000;
     text-transform: uppercase;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -73,7 +73,7 @@ body {
 }
 
 #menu2-container .logo:hover {
-    color: #ccc;
+    color: #000000;
 }
 
 #menu2-container .logo i {
@@ -118,7 +118,7 @@ body {
 }
 
 #menu2-container .menu-mobile > div:hover {
-    color: #ccc;
+    color: #000000;
     transform: translateY(-2px);
 }
 
@@ -227,7 +227,7 @@ body {
     #menu-container .logo {
         font-size: 42px;
         font-weight: 800;
-        color: #ccc;
+        color: #000000;
         text-transform: uppercase;
         cursor: pointer;
         transition: color 0.3s ease;
@@ -237,7 +237,7 @@ body {
     }
 
     #menu-container .logo:hover {
-        color: #ccc;
+        color: #000000;
     }
 
     #menu-container .logo i {
@@ -280,7 +280,7 @@ body {
     }
 
     #menu-container .menu-horizontal > div:hover {
-        color: #ccc;
+        color: #000000;
         transform: translateY(-2px);
     }
  
