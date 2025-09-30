@@ -148,7 +148,7 @@ body {
 }
 
 #menu2-container .dropdown-content a:hover {
-    background-color: ;
+    background-color: #8f0175;
 }
 
 /* Menú toggle */
@@ -313,7 +313,7 @@ body {
     }
 
     #menu-container .dropdown-content a:hover {
-        background-color: ;
+        background-color: #8f0175;
     }
  
     /* Estilos adicionales para #menu-container */
