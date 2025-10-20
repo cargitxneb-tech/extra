@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Términos y Condiciones | CNEBX Extra</title>
+
+  <style>
+    /* ======= RESETEO ======= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to bottom right, #f8f9ff, #eceaff);
+      color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+      overflow-x: hidden;
+    }
+
+    /* ======= CONTENEDOR ======= */
+    .terminos {
+      position: relative;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 25px;
+      box-shadow: 0 0 35px rgba(140, 82, 255, 0.25);
+      max-width: 950px;
+      width: 100%;
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+      animation: fadeIn 1s ease;
+      padding: 50px 60px;
+      z-index: 1;
+    }
+
+    /* ======= MARCO ANIMADO ======= */
+    .terminos::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 25px;
+      padding: 3px;
+      background: linear-gradient(90deg, #FF5757, #8C52FF, #FF5757, #8C52FF);
+      background-size: 400% 400%;
+      animation: borderFlow 6s linear infinite;
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      z-index: 5;
+    }
+
+    /* ======= TÍTULO ======= */
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      background: linear-gradient(to right, #FF5757, #8C52FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      margin-bottom: 35px;
+      text-shadow: 0 0 10px rgba(255, 87, 87, 0.4);
+      position: relative;
+      z-index: 20;
+    }
+
+    h1::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90px;
+      height: 3px;
+      background: linear-gradient(to right, #FF5757, #8C52FF);
+      border-radius: 2px;
+      box-shadow: 0 0 8px rgba(140, 82, 255, 0.6);
+    }
+
+    /* ======= CONTENIDO ======= */
+    .contenido {
+      text-align: justify;
+      color: #333;
+      font-size: 1rem;
+      line-height: 1.8;
+      position: relative;
+      z-index: 15;
+    }
+
+    .contenido h2 {
+      font-size: 1.4rem;
+      color: #8C52FF;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-weight: 600;
+      z-index: 15;
+      position: relative;
+    }
+
+    .contenido p {
+      margin-bottom: 18px;
+      z-index: 15;
+      position: relative;
+    }
+
+    .contenido ul {
+      margin-left: 25px;
+      margin-bottom: 18px;
+      z-index: 15;
+      position: relative;
+    }
+
+    .contenido ul li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: #FF5757;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ======= EFECTOS LUMINOSOS ======= */
+    .glow-circle, .glow-circle2 {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    .glow-circle {
+      top: -180px;
+      left: -120px;
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(255, 87, 87, 0.4), transparent 70%);
+      animation: float1 6s infinite alternate;
+    }
+
+    .glow-circle2 {
+      bottom: -180px;
+      right: -120px;
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(140, 82, 255, 0.4), transparent 70%);
+      animation: float2 7s infinite alternate;
+    }
+
+    /* ======= ANIMACIONES ======= */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float1 {
+      from { transform: translateY(0); opacity: 0.4; }
+      to { transform: translateY(20px); opacity: 0.7; }
+    }
+
+    @keyframes float2 {
+      from { transform: translateY(0); opacity: 0.4; }
+      to { transform: translateY(-20px); opacity: 0.7; }
+    }
+
+    @keyframes borderFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ======= RESPONSIVO ======= */
+    @media (max-width: 768px) {
+      .terminos {
+        padding: 35px 25px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .contenido h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="terminos">
+    <div class="glow-circle"></div>
+    <div class="glow-circle2"></div>
+
+    <h1>Términos y Condiciones</h1>
+
+    <div class="contenido">
+      <p>Bienvenido a <strong>CNEBX Extra</strong>, parte del ecosistema digital <strong>CNEBX Media</strong>. Al acceder y utilizar nuestro sitio, aceptas cumplir con los presentes <strong>Términos y Condiciones</strong>. Si no estás de acuerdo con alguno de ellos, te recomendamos suspender el uso de nuestros servicios.</p>
+
+      <h2>1. Uso del Sitio</h2>
+      <p>El contenido disponible en <strong>CNEBX Extra</strong> tiene fines informativos, comparativos y de entretenimiento. Aunque trabajamos para ofrecer información precisa y actualizada, no garantizamos la ausencia total de errores o interrupciones en el servicio.</p>
+
+      <h2>2. Propiedad Intelectual</h2>
+      <p>Todos los materiales publicados —incluyendo textos, imágenes, logotipos, gráficos, videos, y elementos de diseño— son propiedad de <strong>CNEBX Extra</strong> o de sus respectivos autores. Queda estrictamente prohibida su reproducción, modificación o distribución sin autorización previa por escrito.</p>
+
+      <h2>3. Enlaces y Sitios del Ecosistema</h2>
+      <p><strong>CNEBX Extra</strong> puede incluir enlaces hacia otros proyectos del ecosistema o sitios externos, como:</p>
+      <ul>
+        <li><a href="https://noticias.cnebx.com" target="_blank" style="color:#FF5757;">CNEBX Noticias</a>: portal de actualidad, política, economía, sociedad y <strong>deportes</strong>.</li>
+        <li><a href="https://blog.cnebx.com" target="_blank" style="color:#8C52FF;">CNEBX Blog</a>: espacio de análisis y opinión sobre finanzas, cultura, salud y religión.</li>
+      </ul>
+      <p>No somos responsables del contenido, políticas de privacidad o prácticas de dichos terceros. Te recomendamos revisar sus propias condiciones antes de interactuar con ellos.</p>
+
+      <h2>4. Publicidad y Monetización</h2>
+      <p><strong>CNEBX Extra</strong> participa en programas publicitarios como Google AdSense y plataformas de afiliados. Los anuncios mostrados pueden basarse en tus intereses y actividad. No garantizamos la disponibilidad, seguridad ni desempeño de los servicios o productos promocionados.</p>
+
+      <h2>5. Limitación de Responsabilidad</h2>
+      <p>No asumimos responsabilidad por daños directos o indirectos derivados del uso o la imposibilidad de uso del sitio, incluyendo errores de contenido, interrupciones técnicas o enlaces externos.</p>
+
+      <h2>6. Modificaciones del Servicio</h2>
+      <p><strong>CNEBX Extra</strong> se reserva el derecho de actualizar, modificar o eliminar cualquier parte del sitio o de estos términos sin previo aviso. Las modificaciones entran en vigor en el momento de su publicación.</p>
+
+      <h2>7. Contacto</h2>
+      <p>Si tienes consultas, comentarios o solicitudes relacionadas con estos términos, puedes comunicarte con nosotros a través del correo: <strong>contacto.cnebxextra@gmail.com</strong>.</p>
+
+      <p>Al continuar navegando por nuestro sitio, confirmas que has leído, comprendido y aceptas estos <strong>Términos y Condiciones</strong> en su totalidad.</p>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.style.opacity = "0";
+      setTimeout(() => {
+        document.body.style.transition = "opacity 1.2s ease";
+        document.body.style.opacity = "1";
+      }, 200);
+    });
+  </script>
+</body>
+</html>
