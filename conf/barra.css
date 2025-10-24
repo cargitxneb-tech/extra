@@ -1,3 +1,9 @@
+#body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
 #cnebbarra {
   --bg: linear-gradient(to right, #FF5757, #8C52FF);
   --light: #fff;
