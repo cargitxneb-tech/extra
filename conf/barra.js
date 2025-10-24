@@ -1,5 +1,5 @@
 // Cargar barra desde /es/web/barrainfo.html
-fetch('es/web/barrainfo.html')
+fetch('/conf/barrainfo.html')
   .then(res => res.text())
   .then(html => {
     document.getElementById('barra-container').innerHTML = html;
