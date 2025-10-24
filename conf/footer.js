@@ -1,7 +1,7 @@
 // app.js
 
 // Cargar el footer desde la ruta /es/web/footer.html
-fetch('/es/web/footer.html')
+fetch('/conf/footer.html')
   .then(response => {
     if (!response.ok) {
       throw new Error('Error al cargar el footer.');
