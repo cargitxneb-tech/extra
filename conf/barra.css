@@ -3,6 +3,26 @@ body {
       padding: 0;
       box-sizing: border-box;
     }
+.anuncio {
+  width: 99%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+@media (max-width: 850px) {
+  .anuncio {
+    height: 60px;
+  }
+}
+
+@media (max-width: 580px) {
+  .anuncio {
+    height: 52px;
+  }
+}
 
 #cnebbarra {
   --bg: linear-gradient(to right, #FF5757, #8C52FF);
