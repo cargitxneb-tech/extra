@@ -1,22 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MiBlog LED</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiénes Somos | CNEBX Extra</title>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/conf/barra.css">
 
   <style>
     /* ======= RESETEO ======= */
-    * {
+    #cnebquienes * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    body {
+    #cnebquienes {
       font-family: "Poppins", sans-serif;
       background: linear-gradient(to bottom right, #f7f8ff, #eceaff);
       color: #222;
@@ -26,10 +25,12 @@
       min-height: 100vh;
       padding: 40px 20px;
       overflow-x: hidden;
+      position: relative;
+      z-index: 0;
     }
 
     /* ======= CONTENEDOR ======= */
-    .quienes-somos {
+    #cnebquienes .quienes-somos {
       position: relative;
       background: rgba(255, 255, 255, 0.9);
       border-radius: 25px;
@@ -38,12 +39,12 @@
       width: 100%;
       overflow: hidden;
       backdrop-filter: blur(12px);
-      animation: fadeIn 1s ease;
+      animation: cneb-fadeIn 1s ease;
       z-index: 1;
     }
 
     /* ======= MARCO LED ANIMADO ======= */
-    .quienes-somos::before {
+    #cnebquienes .quienes-somos::before {
       content: "";
       position: absolute;
       inset: 0;
@@ -51,27 +52,27 @@
       padding: 3px;
       background: linear-gradient(90deg, #00d4ff, #8C52FF, #00d4ff, #8C52FF);
       background-size: 400% 400%;
-      animation: borderFlow 6s linear infinite;
+      animation: cneb-borderFlow 6s linear infinite;
       -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
-      z-index: 3; /* 🔹 El marco ahora está por encima de la imagen */
+      z-index: 3;
       pointer-events: none;
     }
 
     /* ======= IMAGEN PRINCIPAL ======= */
-    .imagen {
+    #cnebquienes .imagen {
       width: 100%;
       height: 320px;
       overflow: hidden;
       position: relative;
       border-bottom: 2px solid rgba(140, 82, 255, 0.2);
-      z-index: 1; /* 🔹 Debajo del marco LED */
+      z-index: 1;
     }
 
-    .imagen img {
+    #cnebquienes .imagen img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -80,14 +81,14 @@
     }
 
     /* ======= CONTENIDO ======= */
-    .contenido {
+    #cnebquienes .contenido {
       padding: 50px 60px;
       text-align: center;
       position: relative;
-      z-index: 5; /* 🔹 Texto y enlaces siempre encima de todo */
+      z-index: 5;
     }
 
-    .contenido h1 {
+    #cnebquienes .contenido h1 {
       font-size: 2.3rem;
       font-weight: 700;
       background: linear-gradient(to right, #00d4ff, #8C52FF);
@@ -99,7 +100,7 @@
       position: relative;
     }
 
-    .contenido h1::after {
+    #cnebquienes .contenido h1::after {
       content: "";
       position: absolute;
       bottom: -10px;
@@ -112,7 +113,7 @@
       box-shadow: 0 0 10px rgba(140, 82, 255, 0.6);
     }
 
-    .contenido p {
+    #cnebquienes .contenido p {
       margin-top: 20px;
       font-size: 1rem;
       color: #333;
@@ -124,7 +125,8 @@
     }
 
     /* ======= EFECTOS LUMINOSOS ======= */
-    .glow-circle, .glow-circle2 {
+    #cnebquienes .glow-circle,
+    #cnebquienes .glow-circle2 {
       position: absolute;
       border-radius: 50%;
       filter: blur(120px);
@@ -133,41 +135,41 @@
       pointer-events: none;
     }
 
-    .glow-circle {
+    #cnebquienes .glow-circle {
       top: -180px;
       left: -120px;
       width: 350px;
       height: 350px;
       background: radial-gradient(circle, rgba(0, 212, 255, 0.4), transparent 70%);
-      animation: float1 6s infinite alternate;
+      animation: cneb-float1 6s infinite alternate;
     }
 
-    .glow-circle2 {
+    #cnebquienes .glow-circle2 {
       bottom: -180px;
       right: -120px;
       width: 350px;
       height: 350px;
       background: radial-gradient(circle, rgba(140, 82, 255, 0.4), transparent 70%);
-      animation: float2 7s infinite alternate;
+      animation: cneb-float2 7s infinite alternate;
     }
 
     /* ======= ANIMACIONES ======= */
-    @keyframes fadeIn {
+    @keyframes cneb-fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes float1 {
+    @keyframes cneb-float1 {
       from { transform: translateY(0); opacity: 0.4; }
       to { transform: translateY(20px); opacity: 0.7; }
     }
 
-    @keyframes float2 {
+    @keyframes cneb-float2 {
       from { transform: translateY(0); opacity: 0.4; }
       to { transform: translateY(-20px); opacity: 0.7; }
     }
 
-    @keyframes borderFlow {
+    @keyframes cneb-borderFlow {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
@@ -175,83 +177,86 @@
 
     /* ======= RESPONSIVO ======= */
     @media (max-width: 768px) {
-      .contenido {
+      #cnebquienes .contenido {
         padding: 35px 25px;
       }
 
-      .contenido h1 {
+      #cnebquienes .contenido h1 {
         font-size: 1.9rem;
       }
 
-      .contenido p {
+      #cnebquienes .contenido p {
         font-size: 0.95rem;
       }
 
-      .imagen {
+      #cnebquienes .imagen {
         height: 240px;
       }
     }
   </style>
-
 </head>
+
 <body>
 
-  <!-- Aquí se insertará la barra -->
+    <!-- Aquí se insertará la barra -->
   <div id="barra-container"></div>
+  
+  <div id="cnebquienes">
+    <section class="quienes-somos">
+      <div class="glow-circle"></div>
+      <div class="glow-circle2"></div>
 
-   <section class="quienes-somos">
-    <div class="glow-circle"></div>
-    <div class="glow-circle2"></div>
+      <div class="imagen">
+        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1050&q=60" alt="Tecnología gamer y digital CNEBX Extra">
+      </div>
 
-    <div class="imagen">
-      <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1050&q=60" alt="Tecnología gamer y digital CNEBX Extra">
-    </div>
+      <div class="contenido">
+        <h1>Quiénes Somos</h1>
+        <p><strong>CNEBX Extra</strong> es el espacio del ecosistema <strong>CNEBX</strong> dedicado a la tecnología, innovación, comparativas, aplicaciones, videojuegos y cultura digital. Nuestro objetivo es ofrecer información útil, confiable y actual sobre el universo tech y gamer.</p>
 
-    <div class="contenido">
-      <h1>Quiénes Somos</h1>
-      <p><strong>CNEBX Extra</strong> es el espacio del ecosistema <strong>CNEBX</strong> dedicado a la tecnología, innovación, comparativas, aplicaciones, videojuegos y cultura digital. Nuestro objetivo es ofrecer información útil, confiable y actual sobre el universo tech y gamer.</p>
+        <p>Desde reseñas de hardware y software hasta recomendaciones de apps, guías de compra y análisis de tendencias digitales, trabajamos para ayudarte a tomar decisiones informadas en un entorno tecnológico en constante evolución.</p>
 
-      <p>Desde reseñas de hardware y software hasta recomendaciones de apps, guías de compra y análisis de tendencias digitales, trabajamos para ayudarte a tomar decisiones informadas en un entorno tecnológico en constante evolución.</p>
+        <p>Formamos parte del ecosistema <strong>CNEBX Media</strong>, junto a:</p>
 
-      <p>Formamos parte del ecosistema <strong>CNEBX Media</strong>, junto a:</p>
+        <ul style="text-align:left; max-width:750px; margin: 15px auto; line-height:1.8;">
+          <li>
+            <strong>
+              <a href="https://noticia.cnebx.com/" target="_blank" rel="noopener noreferrer" style="color:#8C52FF; text-decoration:none;">
+                CNEBX Noticias
+              </a>:
+            </strong>
+            medio digital de actualidad, política, economía y sociedad con enfoque global.
+          </li>
 
-      <ul style="text-align:left; max-width:750px; margin: 15px auto; line-height:1.8;">
-        <li>
-          <strong>
-            <a href="https://noticia.cnebx.com/" target="_blank" rel="noopener noreferrer" style="color:#8C52FF; text-decoration:none;">
-              CNEBX Noticias
-            </a>:
-          </strong>
-          medio digital de actualidad, política, economía y sociedad con enfoque global.
-        </li>
+          <li>
+            <strong>
+              <a href="https://blog.cnebx.com/" target="_blank" rel="noopener noreferrer" style="color:#00d4ff; text-decoration:none;">
+                CNEBX Blog
+              </a>:
+            </strong>
+            espacio de análisis y opinión sobre temas de finanzas, salud, cultura y religión.
+          </li>
+        </ul>
 
-        <li>
-          <strong>
-            <a href="https://blog.cnebx.com/" target="_blank" rel="noopener noreferrer" style="color:#00d4ff; text-decoration:none;">
-              CNEBX Blog
-            </a>:
-          </strong>
-          espacio de análisis y opinión sobre temas de finanzas, salud, cultura y religión.
-        </li>
-      </ul>
+        <p>En <strong>CNEBX Extra</strong> creemos que la tecnología impulsa el progreso y la creatividad. Nuestra misión es compartir conocimiento y fomentar una comunidad conectada, informada y apasionada por el futuro digital.</p>
+      </div>
+    </section>
+    
+  </div>
 
-      <p>En <strong>CNEBX Extra</strong> creemos que la tecnología impulsa el progreso y la creatividad. Nuestra misión es compartir conocimiento y fomentar una comunidad conectada, informada y apasionada por el futuro digital.</p>
-    </div>
-  </section>
-
-
-     
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      document.body.style.opacity = "0";
+      const page = document.getElementById("cnebquienes");
+      page.style.opacity = "0";
       setTimeout(() => {
-        document.body.style.transition = "opacity 1.2s ease";
-        document.body.style.opacity = "1";
+        page.style.transition = "opacity 1.2s ease";
+        page.style.opacity = "1";
       }, 200);
     });
   </script>
-  
 
-  <script src="/conf/barra.js"></script>
+
+    <script src="/conf/barra.js"></script>
 </body>
 </html>
+
