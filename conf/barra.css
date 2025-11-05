@@ -1,275 +1,371 @@
-body {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-.anuncio {
-  width: 99%;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70px;
-}
+    /* Estilos generales */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4; /* Fondo claro para contraste */
+            margin-top: 0px; /* Evitar que el contenido se superponga a la barra fija */
+        }
 
-@media (max-width: 850px) {
-  .anuncio {
-    height: 60px;
+        /* Barra de navegación */
+        #b03 .navbar {
+            background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco translúcido */
+            padding: 10px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            top: 10px;
+            border-radius: 17px;
+            height: 40px;
+            z-index: 1000;
+            transition: top 0.3s ease, left 0.3s ease, right 0.3s ease; /* Transición suave */
+            backdrop-filter: blur(8px); /* Efecto difuminado */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+        }
+
+        /* Línea sobre la barra con el color del ícono de la hamburguesa */
+        #b03 .navbar-line {
+            height: 3px; /* Altura de la línea */
+            background: linear-gradient(90deg, #c67c12, #e67e22); /* Degradado naranja más oscuro */
+            width: 100%;
+            position: absolute;
+            top: -3px; /* Justo encima de la barra */
+            left: 0;
+            right: 0;
+            z-index: -1; /* Asegura que quede detrás de la barra */
+        }
+
+        /* Barra fija al hacer scroll */
+        #b03 .navbar.fixed {
+            position: fixed;
+            top: 10px;
+            left: 9px;
+            right: 9px;
+            z-index: 1000;
+        }
+
+        /* Logo */
+        #b03 .navbar .logo img {
+            width: 110px;
+            height: auto;
+        }
+
+        /* Estilos de los enlaces de navegación con degradado */
+        #b03 .nav-links {
+            list-style: none;
+            display: flex;
+            margin-right: 30px;
+        }
+
+        #b03 .nav-links li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        #b03 .nav-links a {
+            background: linear-gradient(90deg, #c67c12, #e67e22); /* Degradado de naranja oscuro */
+            -webkit-background-clip: text;
+            color: transparent;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s, transform 0.3s;
+            display: block;
+            cursor: pointer;
+        }
+
+        #b03 .nav-links a:hover {
+            color: #f39c12; /* Naranja cuando se pasa el ratón */
+            transform: scale(1.1); /* Efecto de hover */
+        }
+
+        /* Icono para submenú */
+        #b03 .nav-links li a::after {
+            content: "\f107"; /* Icono de "angle-down" */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 800;
+            font-size: 18px;
+            margin-left: 8px;
+            display: inline-block;
+            color: #c67c12; /* Flecha de color naranja oscuro */
+            transition: transform 0.3s ease;
+        }
+
+        /* Submenú */
+        #b03 .sub-menu {
+            display: none;
+            list-style: none;
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+            top: 40px;
+            left: -20px;
+            width: 180px;
+            border-radius: 10px;
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #b03 .sub-menu li a {
+            padding: 8px;
+            color: #000; /* Color del texto en submenú */
+            font-size: 16px;
+        }
+
+        #b03 .sub-menu li a:hover {
+            border-radius: 10px;
+            background-color: rgba(243, 156, 18, 0.1); /* Color más suave en hover */
+        }
+
+        /* Icono rota al abrir submenú */
+        #b03 .open > a::after {
+            transform: rotate(180deg);
+        }
+
+        /* Quitar icono de subcategorías */
+        #b03 .sub-menu li a::after {
+            content: none;
+        }
+
+        /* Selector de idioma */
+        #b03 .language-selector img {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        #b03 .language-selector img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Mostrar submenú */
+        #b03 .open > .sub-menu {
+            display: block;
+        }
+
+        /* Estilos para contenido de prueba */
+        #b03 .content {
+            padding: 50px 20px;
+            height: 2000px; /* Altura para simular scroll */
+        }
+
+        /* Ajustes para el submenú */
+        #b03 .sub-menu li {
+            list-style: none;
+        }
+@media (max-width: 770px) {
+   #b03 {
+    display: none; /* Esto lo oculta en pantallas grandes */
   }
 }
 
-@media (max-width: 580px) {
-  .anuncio {
-    height: 52px;
-  }
+
+
+/* Aislar los estilos para el contenedor con ID 'b40' */
+#b40 .navbar {
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con opacidad */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 3px;
+    left: 0;
+    right: 0;
+    border-radius: 17px;
+    z-index: 1000;
+    height: 35px;
+    transition: position 0.3s ease;
+    backdrop-filter: blur(8px); /* Difuminado en el fondo */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada para dar un look moderno */
 }
 
-#cnebbarra {
-  --bg: linear-gradient(to right, #FF5757, #8C52FF);
-  --light: #fff;
-  --hoverText: #fff;
-  --transition: 0.25s;
-  font-family: "Poppins", sans-serif;
-  color: var(--light);
-}
-
-#cnebbarra * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* HEADER */
-#cnebbarra .header {
-  position: relative;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 20px 16px;
-  background: var(--bg);
-  z-index: 1000;
-  transition: all 0.4s ease;
-}
-
-#cnebbarra .header.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-  animation: cneb-fadeSlideDown .4s ease forwards;
-}
-
-@keyframes cneb-fadeSlideDown {
-  from { transform: translateY(-100%); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-/* LÍNEA LED */
-#cnebbarra .header::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, #00ffff, #ff00ff, #00ffff);
-  background-size: 200% 100%;
-  animation: cneb-ledBar 3s linear infinite;
-}
-
-@keyframes cneb-ledBar {
-  0% { background-position: 0% 0; }
-  100% { background-position: 200% 0; }
-}
-
-/* LOGO */
-#cnebbarra .brand {
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: var(--hoverText);
-}
-
-/* NAV PRINCIPAL */
-#cnebbarra .navlinks {
-  display: none;
-  align-items: center;
-  gap: 50px;
-}
-
-#cnebbarra .navlinks li {
-  list-style: none;
-  position: relative;
-}
-
-#cnebbarra .navlinks button {
-  background: none;
-  border: none;
-  color: var(--light);
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 1.15rem;
-  position: relative;
-  transition: color var(--transition);
-}
-
-@media (min-width: 720px) {
-  #cnebbarra .navlinks button:hover { color: var(--hoverText); }
-}
-
-/* ICONO CHEVRON */
-#cnebbarra .chevron {
-  width: 20px;
-  height: 20px;
-  stroke: currentColor;
-  stroke-width: 2;
-  transition: transform 0.35s cubic-bezier(.4,1.4,.4,1);
-}
-#cnebbarra .chevron.open { transform: rotate(180deg); }
-
-@media (max-width: 719px) {
-  #cnebbarra .mobile-toggle .chevron { transform: rotate(0deg); }
-  #cnebbarra .mobile-toggle.open .chevron { transform: rotate(180deg); }
-}
-
-/* BANDERAS */
-#cnebbarra .flag {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-/* SUBMENÚ ESCRITORIO */
-#cnebbarra .submenu {
-  display: none;
-  position: absolute;
-  top: 120%;
-  margin-top: 16px;
-  left: 0;
-  background: var(--bg);
-  border-radius: 10px;
-  padding: 0;
-  min-width: 200px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.4);
-  z-index: -1;
-  animation: cneb-fadeSlide .25s ease forwards;
-}
-
-@keyframes cneb-fadeSlide {
-  from { opacity: 0; transform: translateY(-6px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-#cnebbarra .submenu a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: transform var(--transition);
-}
-
-@media (min-width: 720px) {
-  #cnebbarra .submenu a:hover {
-    background: none;
-    transform: scale(1.05);
-    color: inherit;
-  }
-}
-
-/* HAMBURGUESA */
-#cnebbarra .actions { display: flex; align-items: center; }
-
-#cnebbarra .hamburger {
-  width: 30px;
-  height: 22px;
-  cursor: pointer;
-  border: 0;
-  background: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-#cnebbarra .hamburger span {
-  display: block;
-  height: 3px;
-  width: 100%;
-  background: #fff;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-#cnebbarra .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
-#cnebbarra .hamburger.active span:nth-child(2){opacity:0;}
-#cnebbarra .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
-
-/* MENÚ MÓVIL */
-#cnebbarra #menuList {
-  display: none;
-  position: fixed;
-  top: ;    
-  margin-top: -25px;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: var(--bg);
-  padding: 90px 20px 40px;
-  overflow-y: auto;
-  z-index: 900;
-}
-
-#cnebbarra #menuList ul { list-style: none; }
-#cnebbarra #menuList button {
-  width: 100%;
-  background: none;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 0;
-  color: #fff;
-  font-weight: 600;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: all var(--transition);
-}
-#cnebbarra #menuList button:hover { color: #fff; }
-
-/* SUBMENÚ MÓVIL */
-#cnebbarra .mobile-submenu {
-  display: none;
-  padding-left: 16px;
-  border-left: 2px solid rgba(255,255,255,0.4);
-}
-#cnebbarra .mobile-submenu a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #fff;
-  padding: 6px 0;
-  text-decoration: none;
-  transition: color var(--transition);
-}
-#cnebbarra .mobile-submenu a:hover { color: #fff; }
-
-/* --- ESCRITORIO --- */
-@media (min-width: 720px) {
-  #cnebbarra .navlinks { display: flex; }
-  #cnebbarra .header {
-    justify-content: center;
-    padding: 22px 50px 28px;
-  }
-  #cnebbarra .brand {
+/* Línea superior con el color del icono de hamburguesa */
+#b40 .navbar-line {
+    height: 3px; /* Altura de la línea */
+    background: linear-gradient(90deg, #f39c12, #e67e22); /* Degradado naranja igual al icono de la hamburguesa */
+    width: 100%;
     position: absolute;
-    left: 36px;
-    color: #fff;
+    top: -3px; /* Justo encima de la barra de navegación */
+    left: 0;
+    right: 0;
+    z-index: -1; /* Asegura que quede detrás de la barra */
+}
+
+/* Barra fija al hacer scroll */
+#b40 .navbar.fixed {
+    position: fixed;
+    top: 3px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin: 0;
+}
+
+#b40 .logo img {
+    width: 110px;
+    height: auto;
+}
+
+/* Icono de hamburguesa */
+#b40 .hamburger {
+    position: relative;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+/* Barras de la hamburguesa (degradado naranja en la "X") */
+#b40 .hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, #f39c12, #e67e22); /* Degradado naranja */
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto para transformar la hamburguesa en una X */
+#b40 .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#b40 .hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+#b40 .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    background: linear-gradient(90deg, #f39c12, #e67e22); /* Degradado naranja */
+}
+
+/* Panel que aparece debajo de la barra */
+#b40 .bottom-panel {
+    display: none;
+    position: absolute;
+    top: 65px;  /* Inicialmente a 80px desde la parte superior de la página */
+    left: 3px;
+    right: 3px;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con opacidad */
+    padding: 7px;
+    box-sizing: border-box;
+    z-index: 999;
+    max-height: 80%;
+    overflow-y: auto;
+    border-radius: 10px;
+    transition: top 0.3s ease;
+    backdrop-filter: blur(10px); /* Efecto de difuminado en el fondo */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15); /* Sombra más fuerte para resaltar el panel */
+}
+
+/* Mostrar el panel cuando está abierto */
+#b40 .bottom-panel.show {
+    display: block;
+    opacity: 0.95; /* Hace el panel ligeramente opaco para darle un toque de visibilidad */
+}
+
+/* Estilo para la navegación dentro del panel */
+#b40 .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: black; /* Hacer las letras negras */
+}
+
+#b40 .nav-links li {
+    margin: 10px 0;
+    position: relative;
+}
+
+#b40 .nav-links a {
+    color: black; /* Hacer las letras negras */
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+/* Submenú que se expande */
+#b40 .sub-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+    padding-left: 10px;
+    top: 0px;
+}
+
+#b40 .sub-menu.show {
+    display: block;
+}
+
+#b40 .sub-menu li a {
+    color: black; /* Hacer las letras negras */
+    padding: 4px;
+    font-size: 13px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* Estilo para las banderas circulares */
+#b40 .sub-menu li a .flag {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Overlay transparente para el menú de la barra */
+#b40 .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco translúcido */
+    z-index: 500;
+    backdrop-filter: blur(10px); /* Difuminado */
+}
+
+#b40 .overlay.show {
+    display: block;
+}
+
+/* Flecha que rota al abrir o cerrar el submenú */
+#b40 .toggle-submenu i {
+    font-size: 14px; /* Tamaño más pequeño para las flechas */
+    transition: transform 0.3s ease;
+}
+
+#b40 .toggle-submenu.active i {
+    transform: rotate(180deg); /* Rota la flecha */
+}
+
+/* Hacer que los elementos "Idioma", "Inicio", etc. solo actúen como botones, no como enlaces */
+#b40 .toggle-submenu {
+    cursor: pointer;
+}
+
+/* Desactivar el scroll en el body cuando el panel esté abierto */
+body.no-scroll {
+    overflow: hidden;
+}
+@media (min-width: 769px) {
+   #b40 {
+    display: none; /* Esto lo oculta en pantallas grandes */
   }
-  #cnebbarra .actions { display: none !important; }
-  #cnebbarra #menuList { display: none !important; }
 }
