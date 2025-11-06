@@ -1,17 +1,16 @@
-fetch('/conf/barrainfo.html')
-  .then(res => res.text())
+// --- CARGA DEL HEADER ---
+fetch('/conf/barrainfo.html') // Ruta relativa del archivo HTML del menú
+  .then(response => response.text())  // Convierte el contenido en texto
   .then(html => {
-    // Insertamos el HTML
-    const container = document.getElementById('barra-container');
-    container.innerHTML = html;
-    
-    // Asegurarnos de que los estilos se apliquen correctamente
-    setTimeout(() => {
-      // Aquí se puede inicializar la función para la barra después de insertar el HTML
-      initCnebBarra();  // Asegúrate de que esta función exista
-      attachEventListeners();  // Llamar a una función que attach los eventos
-    }, 0);  // Forzar un pequeño retraso para dar tiempo al navegador a aplicar los estilos
-  });
+    // Inyectar el HTML dentro del contenedor
+    const contenedor = document.getElementById('miHeaderNav');
+    contenedor.innerHTML = html;
+
+    // --- Inicializa la lógica del menú ---
+    inicializarMenu();
+  })
+  .catch(err => console.error('Error al cargar barrainfo.html:', err));
+
 
 // --- Inicializa los eventos del menú ---
 function inicializarMenu() {
@@ -67,4 +66,3 @@ function inicializarMenu() {
     }
   });
 }
-
