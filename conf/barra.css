@@ -156,6 +156,9 @@
         #b03 .sub-menu li {
             list-style: none;
         }
+body.no-scroll {
+    overflow: none;
+}
 @media (max-width: 770px) {
    #b03 {
     display: none; /* Esto lo oculta en pantallas grandes */
