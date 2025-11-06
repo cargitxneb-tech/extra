@@ -2,8 +2,14 @@
 fetch('/conf/barrainfo.html')
   .then(res => res.text())
   .then(html => {
-    document.getElementById('barra-container').innerHTML = html;
-    initCnebBarra();  // Asegúrate de que esta función exista
+    // Insertamos el HTML
+    const container = document.getElementById('barra-container');
+    container.innerHTML = html;
+    
+    // Asegurarnos de que los estilos se apliquen correctamente
+    setTimeout(() => {
+      initCnebBarra();  // Asegúrate de que esta función exista
+    }, 0);  // Forzar un pequeño retraso para dar tiempo al navegador a aplicar los estilos
   });
 
 // Primer bloque: Barra de navegación fija
