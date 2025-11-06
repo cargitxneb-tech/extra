@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiénes Somos | CNEBX Extra</title>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/conf/barra.css">
+  <link rel="stylesheet" href="/conf/footer.css">
+  
+ 
+</head>
+
+<body>
+  
+    <!-- Aquí se insertará la barra -->
+  <div id="barra-container"></div>
+  
+  
+
+    <!-- Aquí se cargará el footer -->
+  <div id="p5040"></div>
+
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const page = document.getElementById("cnebquienes");
+      page.style.opacity = "0";
+      setTimeout(() => {
+        page.style.transition = "opacity 1.2s ease";
+        page.style.opacity = "1";
+      }, 200);
+    });
+  </script>
+
+   <script src="/conf/footer.js"></script>
+    <script src="/conf/barra.js"></script>
+</body>
+</html>
