@@ -156,8 +156,8 @@
         #b03 .sub-menu li {
             list-style: none;
         }
-body.no-scroll {
-    overflow: none;
+body.scroll {
+    overflow: hidden;
 }
 @media (max-width: 770px) {
    #b03 {
