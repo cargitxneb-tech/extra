@@ -8,17 +8,8 @@
  <link rel="stylesheet" href="conf/barra.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-/* Todo el CSS queda dentro del ámbito #c01 */
-body {
-  --bg:#ffffff;
-  --card:rgba(255,255,255,0.85);
-  --accent-a:#7c3aed;
-  --accent-b:#ff5a3c;
-  --muted:#6b7280;
-  --text:#0f0f10;
-  font-family:Inter,system-ui,Arial,sans-serif;
-  background:linear-gradient(180deg,#ffffff 0%,#fff6f3 100%);
- 
+
+
 #c01 {
   --bg:#ffffff;
   --card:rgba(255,255,255,0.85);
@@ -31,8 +22,10 @@ body {
   color:var(--text);
   line-height:1.6;
   position:relative;
+  overflow-x:hidden;
   box-sizing:border-box;
   padding:28px;
+
 }
 
 /* brillos gamer */
