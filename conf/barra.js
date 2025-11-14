@@ -11,6 +11,15 @@ fetch('/conf/barrainfo.html') // Ruta relativa del archivo HTML del menú
   })
   .catch(err => console.error('Error al cargar barrainfo.html:', err));
 
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("/conf/footer.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch(err => console.error("Error al cargar el footer:", err));
+});
+
 
 // --- Inicializa los eventos del menú ---
 function inicializarMenu() {
