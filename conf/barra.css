@@ -372,3 +372,118 @@ body.no-scroll {
     display: none; /* Esto lo oculta en pantallas grandes */
   }
 }
+/* Seguridad: todo el CSS dentro de #p22 */
+#p22 *,
+#p22 {
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* --- Fondo del footer --- */
+#p22 {
+    width: 100%;
+    padding: 55px 20px 25px 20px;
+
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    box-shadow:
+        0 -40px 60px rgba(120, 0, 255, 0.20),
+        0 -25px 45px rgba(255, 0, 100, 0.15),
+        0 0 25px rgba(255, 255, 255, 0.35);
+
+    border-top: 1px solid rgba(150, 0, 255, 0.28);
+    border-bottom: 1px solid rgba(255, 0, 90, 0.28);
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Contenedor */
+#p22 .p22-container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 0 10px;
+}
+
+/* Logo */
+#p22 .p22-logo img {
+    height: 70px;
+    max-width: 100%;
+    margin-bottom: 18px;
+    filter: drop-shadow(0 0 10px rgba(120, 0, 255, 0.4));
+}
+
+/* Descripción */
+#p22 .p22-description {
+    max-width: 700px;
+    margin: auto;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Enlaces */
+#p22 .p22-links {
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+#p22 .p22-links a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+#p22 .p22-links a:hover {
+    color: #a400ff;
+    text-shadow: 0 0 6px rgba(164, 0, 255, 0.4);
+}
+
+/* Redes */
+#p22 .p22-social {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+#p22 .p22-social a {
+    font-size: 22px;
+    color: #333;
+    transition: 0.3s;
+}
+
+#p22 .p22-social a:hover {
+    color: #ff006e;
+    text-shadow: 0 0 8px rgba(255, 0, 110, 0.4);
+    transform: scale(1.15);
+}
+
+/* Derechos */
+#p22 .p22-bottom {
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(160, 90, 255, 0.35);
+    font-size: 14px;
+    color: #6b2cff;
+    text-shadow: 0 0 6px rgba(160, 90, 255, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    #p22 .p22-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
