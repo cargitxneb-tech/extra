@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CNEBX Extra — Web en Construcción | Gamer · Tecnología · Apps · Webs · Max</title>
+
+  <!-- SEO -->
+  <meta name="description" content="CNEBX Extra está construyendo una plataforma moderna enfocada en gaming, tecnología, aplicaciones, desarrollo web y contenido MAX. Disponible en español e inglés." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.tudominio.com/extra" />
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="es" href="https://www.tudominio.com/extra" />
+  <link rel="alternate" hreflang="en" href="https://www.tudominio.com/extra/en" />
+
+  <style>
+    :root{
+      --red:#d72638;
+      --orange:#ef6c00;
+      --dark:#0f0f0f;
+      --white:#ffffff;
+      --gray:#8b8b8b;
+      --max:960px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body{
+      margin:0;
+      background:var(--white);
+      color:var(--dark);
+    }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:60px 20px;
+      display:flex;
+      flex-direction:column;
+      gap:50px;
+    }
+
+    header{
+      text-align:center;
+    }
+
+    .logo{
+      font-size:32px;
+      font-weight:800;
+      letter-spacing:1px;
+      background:linear-gradient(135deg,var(--red),var(--orange));
+      -webkit-background-clip:text;
+      color:transparent;
+    }
+
+    /* HERO */
+    .hero{
+      text-align:center;
+      padding:55px 30px;
+      border-radius:18px;
+      background:linear-gradient(135deg,var(--red),var(--orange));
+      color:var(--white);
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+      box-shadow:0 10px 35px rgba(0,0,0,.15);
+    }
+    .hero h1{
+      margin:0;
+      font-size:36px;
+      font-weight:800;
+    }
+    .hero p{
+      margin:0 auto;
+      max-width:620px;
+      opacity:.92;
+      font-size:16px;
+      line-height:1.6;
+    }
+
+    /* CATEGORÍAS */
+    .sections{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px;
+    }
+    .box{
+      background:#fafafa;
+      border-radius:14px;
+      padding:26px;
+      border:1px solid #e5e5e5;
+      transition:.25s ease;
+      box-shadow:0 2px 8px rgba(0,0,0,.04);
+    }
+    .box:hover{
+      transform:translateY(-4px);
+      box-shadow:0 8px 24px rgba(0,0,0,.08);
+      border-color:var(--orange);
+    }
+    .box h3{
+      margin:0;
+      font-size:18px;
+      font-weight:700;
+      color:var(--red);
+    }
+    .box p{
+      margin:10px 0 0;
+      color:#555;
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    footer{
+      text-align:center;
+      font-size:14px;
+      color:var(--gray);
+      padding-top:10px;
+    }
+
+    @media(max-width:700px){
+      .sections{grid-template-columns:1fr;}
+      .hero h1{font-size:30px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <div class="logo">CNEBX EXTRA</div>
+    </header>
+
+    <section class="hero">
+      <h1>Estamos preparando un espacio tech y gamer</h1>
+      <p>Muy pronto estará disponible la versión oficial de CNEBX Extra: un espacio moderno, rápido y lleno de contenido sobre gaming, tecnología, aplicaciones, desarrollo web y contenido MAX — disponible en español e inglés.</p>
+    </section>
+
+    <section class="sections">
+      <div class="box">
+        <h3>Gamer</h3>
+        <p>Novedades, análisis, guías y contenido del mundo gaming con un enfoque actualizado.</p>
+      </div>
+
+      <div class="box">
+        <h3>Tecnología</h3>
+        <p>Noticias, tendencias, hardware, software y todo lo nuevo del entorno tech.</p>
+      </div>
+
+      <div class="box">
+        <h3>Aplicaciones</h3>
+        <p>Apps útiles, comparativas, trucos y herramientas para mejorar tu día a día.</p>
+      </div>
+
+      <div class="box">
+        <h3>Webs</h3>
+        <p>Recursos, diseño, desarrollo web y plataformas modernas para creadores.</p>
+      </div>
+
+      <div class="box">
+        <h3>Max</h3>
+        <p>Contenido extendido, especiales, análisis avanzados y temas extra premium.</p>
+      </div>
+    </section>
+
+    <footer>
+      © <script>document.write(new Date().getFullYear())</script> CNEBX Extra — Próximamente disponible.
+    </footer>
+
+  </div>
+</body>
+</html>
